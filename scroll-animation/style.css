@@ -1,0 +1,27 @@
+body {
+    padding: 10px;
+    color: #fff;
+    background-color: #212121;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.hidden {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    opacity: 0;
+    transition: all 2s;
+    filter: blur(5px);
+    transform: translateX(-100px);
+
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}

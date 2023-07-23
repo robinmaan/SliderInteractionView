@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section class="hidden">
+        <h1>hey i am a Developer</h1>
+
+
+    </section>
+    <section class="hidden">
+        <h3>hey this is myscrolling website</h3>
+    </section>
+    <section class="hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta incidunt odit animi cum, vitae blanditiis,
+            tempora consequuntur dolor libero, assumenda quas quam eveniet!</p>
+    </section>
+    <section class="hidden">
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum deleniti facilis atque.</h2>
+    </section>
+    <section class="hidden">
+        <h1>Thank You</h1>
+    </section>
+
+
+
+    <script>
+        const observer = new IntersectionObserver((entrie) => {
+            entrie.forEach((entry) => {
+                console.log(entry)
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show')
+                } else {
+                    entry.target.classList.remove('show')
+                }
+            })
+        })
+
+        const hiddenElement = document.querySelectorAll('.hidden')
+        hiddenElement.forEach((el) => {
+            observer.observe(el)
+        })
+    </script>
+</body>
+
+</html>
